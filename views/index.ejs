@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Document</title>
+</head>
+<body>
+<section class="row">
+    <section class="column">
+        <h2>Input API Data Here</h2>
+        <form action="/api" method="POST">
+            <input type="text" placeholder="GH Character" name="character">
+            <input type="text" placeholder="Actor" name="actor">
+            <input type="text" placeholder="significant Other" name="significantOther">
+            <textarea name="currentStory" id="" cols="40" rows="5" placeholder="Current Story"></textarea>
+            <button type="submit">Submit New</button>
+            <button type="button" id="updateButton">Update Existing</button>
+            
+        </form>
+    </section>
+    <section class="column">
+        <h2>Delete API Data HERE</h2>
+        <input type="text" placeholder="name to delete" name="deleteInput" id="deleteInput" > <button id="deleteButton">DELETE</button>
+        <h2>Current Cast</h2>
+        <ul class="cast">
+            <% for(let i=0; i< info.length; i++) {%>
+                <li class="cast">
+                    <span><%= info[i] %></span>
+                </li>    
+            <% } %>
+        </ul>
+    </section>
+</section>
+
+
+
+<script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>
